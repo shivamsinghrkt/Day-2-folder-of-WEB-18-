@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <!-- all the div append in container       -->
+   </div>
+</body>
+</html>
+<script>
+   arrwomen=JSON.parse(localStorage.getItem("addproduct"))
+    var report=document.querySelector("#container")
+
+    for(var i=0; i<arrwomen.length;i++){
+      var box=document.createElement("div");
+         
+         var Img=document.createElement("img")
+              Img.setAttribute("src",arrwomen[i].image_url)
+         var Name=document.createElement("h3")
+                 Name.innerText=arrwomen[i].name
+         var Pri=document.createElement("p")
+                 Pri.innerText=arrwomen[i].price
+         var str=document.createElement("p")
+                 str.innerText=arrwomen[i].strikedoffprice
+                 str.style.textDecoration="line-through"
+
+                 box.append(Img,Name,Pri,str);
+                report.append(box);
+    }
+    console.log(report);
+</script>
