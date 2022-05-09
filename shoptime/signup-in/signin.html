@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signin.css">
+</head>
+<body>
+    <div id="signin">
+    <form>
+        <label for="Name">Name: </label>
+        <input type="text" placeholder="Enter User Name" id="name"/>
+        
+        <label for="pass">Password: </label>
+        <input type="password" placeholder="Enter password" id="pass" maxlength="8"/>
+         <input type="submit" name="submit" id="submit" value="Creat New Account"/>
+    </form>
+</div>
+</body>
+<script>
+    var form=document.querySelector("form");
+   var detail=JSON.parse(localStorage.getItem("userData"));
+  
+  
+
+     form.addEventListener("submit",function(event){
+            event.preventDefault();
+            var data={
+               Name:form.name.value,
+               Pass:form.pass.value,
+               
+            }
+
+            if (detail==null){
+                alert("Please Ceate Your Account")
+            }
+            else if((detail.Name==data.Name)&&(detail.Pass==data.Pass)){
+                alert("login successfully");
+                localStorage.setItem("signin", JSON.stringify(userData))
+            }
+            else{
+                alert("user doesn't exist")
+            }
+         })
+</script>
+</html>

@@ -1,0 +1,38 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#signin{
+    height: 300px;
+    width: 20%;
+    margin: auto;
+    border: 1px solid white;
+    margin-top: 40px;
+    background-color: rgb(184, 54, 54);
+    /* background-color:brown; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#signin>form{
+    width: 80%;
+    height: 200px;
+    margin: auto;
+    /* border: 1px solid red; */
+    margin-top: 20px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: 1px solid white;
+    overflow: auto;
+}
+#signin>form>input:nth-child(5){
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    background-color: teal;
+    color: aliceblue;
+    height: 25px;
+    border: 1px solid white;
+    background-color: black;
+    background-color: black;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
